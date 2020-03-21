@@ -13,6 +13,6 @@ This is Java Script based number guessing game. I have designed front end using 
 6. Your guessed number will be displayed right under the alert messages area.
 7. Finally after winning game you can press reset button to reset the game and play the game again
 
-# NOTE: THIS JUST A BEGINNING.. I WILL BE ADDING MORE AND MORE FEATURES WITH MAKING IT MORE ENJOYABLE AS I GET FREE TIME.
+NOTE: THIS JUST A BEGINNING.. I WILL BE ADDING MORE AND MORE FEATURES WITH MAKING IT MORE ENJOYABLE AS I GET FREE TIME.
 
 
