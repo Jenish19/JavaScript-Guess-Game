@@ -9,7 +9,7 @@ body {
     padding: 10% 5% 5% 5%;
 
 }
-#number-input {
+#number-input, #result {
     max-width: 450px;
     margin: auto;
 }
