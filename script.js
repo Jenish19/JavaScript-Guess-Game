@@ -1,5 +1,6 @@
 let computerGeneratedNumber = this.getRandonNumber();
 console.log(computerGeneratedNumber)
+let guessHistoryArr = [];
 
 window.onload = function() {
     document.getElementById('form-submit').addEventListener("click", playGame);
@@ -11,6 +12,8 @@ window.onload = function() {
 function playGame() {
    let numberGuess =  document.getElementById('number-input').value;
    disaplayResults(numberGuess);
+   saveGuessHistory(numberGuess);
+   displayGuessHistory(numberGuess);
 }
 
 function disaplayResults (numberGuess) {
@@ -35,7 +38,6 @@ function getAlert (alertType, message) {
     }
     alertBox += message;
     alertBox += "</div>"
-    console.log(alertBox)
     return alertBox;
 }
 
@@ -64,6 +66,30 @@ function displayTooLow() {
     document.getElementById('result').innerHTML = alertBox;
 }
 
+function saveGuessHistory(guessedNumber) {
+    guessHistoryArr.push(guessedNumber);
+}
+
+function displayGuessHistory() {
+    let index = guessHistoryArr.length -1;
+    let list = "<ul class='list-group'>";  
+        while(index >= 0){
+            list += "<li class='list-group-item list-group-item-info'>" + "You guesssed: <strong>" + guessHistoryArr[index] + "</strong></li>"
+            document.getElementById('history').innerHTML = list;    
+            index --;
+        }
+    list += "</ul>"
+}
+
 function resetGame() {
+
+    computerGeneratedNumber = getRandonNumber();
+    document.getElementById('result').innerHTML = "";
+    guessHistoryArr = [];
+    document.getElementById('history').innerHTML = "";
+    // displayGuessHistory();
+
+
+
 
 }

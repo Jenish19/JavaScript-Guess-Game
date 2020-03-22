@@ -13,6 +13,13 @@ body {
     max-width: 450px;
     margin: auto;
 }
+#history {
+    max-width: 250px;
+    margin: auto;
+}
+#form-submit, #reset-game {
+    margin-bottom: 30px;
+}
 .help-text {
     color: rgb(222, 184, 14);
     padding-bottom: 1px;
